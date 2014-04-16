@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: airbnb_clone_development
+
+test:
+  adapter: postgresql
+  database: airbnb_clone_test

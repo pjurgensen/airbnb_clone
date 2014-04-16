@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= content_for?(:title) ? yield(:title)+" | GroundBnB" : "GroundBnB" %></title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render 'layouts/header' %>
+<div class="container">
+  <div class="container flash">
+    <span class="green"><%= flash[:notice] %></span>
+    <span class="red"><%= flash[:alert] %></span>
+  </div>
+
+  <%= yield %>
+
+</div>
+
+<%= render 'layouts/footer' %>
+
+</body>
+</html>
