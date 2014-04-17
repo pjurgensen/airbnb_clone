@@ -1,6 +1,5 @@
-$BrandFont: 'Acme', sans-serif;
-$RobotoCondensed: 'Roboto Condensed', sans-serif;
-$OpenSansCondensed: 'Open Sans Condensed', sans-serif;
+$BrandFont: 'Inder', sans-serif;
+$Megrim: 'Megrim', cursive;
 
 $BrandPrimaryColor: #035C94;
 $BrandSecondaryColor: #F0A51A;
@@ -77,7 +76,7 @@ $BrandSecondaryColor: #F0A51A;
   color: Red;
 }
 
-.main-page {
+.signup-page {
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 50px;
@@ -86,6 +85,9 @@ $BrandSecondaryColor: #F0A51A;
     font-family: $BrandFont;
     font-size: 3.5em;
     margin-bottom: 30px;
+  }
+  .rental-home {
+    border: 1px solid $BrandPrimaryColor;
   }
   .signup-button {
     padding: 20px 30px;
@@ -120,16 +122,23 @@ $BrandSecondaryColor: #F0A51A;
   }
 }
 
-.all-tweets {
-  .tweet-message {
+.all-rentals {
+  .rental-title {
     display: inline;
     color: $BrandSecondaryColor;
+    font-size: 18px;
   }
-  .tweet-user {
+  .rental-title:hover {
+    display: inline;
+    color: $BrandSecondaryColor;
+    font-size: 18px;
+  }
+  .location-type {
     display: inline;
     color: $BrandPrimaryColor;
+    display: inline;
     text-align: center;
-    font-size: 8px;
+    font-size: 13px;
   }
 
 }

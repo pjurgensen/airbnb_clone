@@ -15,6 +15,6 @@ Let's make an Airbnb clone. I'll leave it to you to write user stories for this 
 User Stories:
 
 * [ COMPLETED ] User signups - when somebody signs up, send them a welcome email.
-* Let users post their vacation home with a title, description, location, and when it is available.
+* [ COMPLETED ] Let users post their vacation home with a title, type, description, and location.
 * Users are able to search for a place to stay by location or using a search feature
 

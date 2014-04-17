@@ -1,6 +1,13 @@
 <div class="user-page container">
   <div class="row">
-    <h1>Welcome <%= @user.username %></h1>
+    <h1><%= @user.username %></h1>
+    <h3><%= @user.email %></h3>
+
+    <% @rentals.each do | rental | %>
+      <li><%= link_to rental.title, rental_path(rental) %><li><br />
+      <li><%= rental.location %> | <%= rental.rental_type %></li><br />
+      <li><%= rental.user.username %> | <%= rental.created_at.strftime("%B %d, %Y") %></li><br />
+    <% end %>
 
   </div>
 </div>
