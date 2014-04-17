@@ -102,7 +102,6 @@ $BrandSecondaryColor: #F0A51A;
     margin-top: 20px;
   }
 }
-
 .all-rentals {
   margin-bottom: 150px;
 }
@@ -162,6 +161,24 @@ li {
   .user-message {
     display: inline;
     color: $BrandSecondaryColor;
+  }
+
+}
+
+.photoslot{
+  padding: 9rem 0rem 9rem 0rem;
+  background: url("http://topappandroid.com/wp-content/uploads/2014/03/SAOTAfirstcrescent1.jpg") center;
+  background-size: cover;
+
+}
+
+.brief{
+  text-align: center;
+   h1 {
+    font-family: $BrandFont;
+    font-size: 3.5em;
+    color: #fff;
+    margin-bottom: 30px;
   }
 
 }
