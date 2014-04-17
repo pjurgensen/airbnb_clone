@@ -1,7 +1,7 @@
 <div class="rental-page container">
   <div class="row">
     <h1><%= @rental.title %></h1>
-    <h2><%= @rental.user.username %> | <%= @rental.created_at.strftime("%B %d, %Y") %></h2>
+    <h2><%= link_to @rental.user.username, user_path(@rental.user.id) %> | <%= @rental.created_at.strftime("%B %d, %Y") %></h2>
 
     <h3><%= @rental.location %> | <%= @rental.rental_type %></h3>
 

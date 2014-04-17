@@ -76,7 +76,7 @@ $BrandSecondaryColor: #F0A51A;
   color: Red;
 }
 
-.signup-page {
+.home-page {
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 50px;
@@ -96,6 +96,10 @@ $BrandSecondaryColor: #F0A51A;
     font-size: 1.5em;
     margin-top: 20px;
   }
+}
+
+.all-rentals {
+  margin-bottom: 150px;
 }
 
 .signup-form {
@@ -122,25 +126,25 @@ $BrandSecondaryColor: #F0A51A;
   }
 }
 
-.all-rentals {
+li {
+  display: inline;
   .rental-title {
-    display: inline;
-    color: $BrandSecondaryColor;
-    font-size: 18px;
+  color: $BrandPrimaryColor;
+  font-size: 18px;
+  text-decoration: none;
   }
   .rental-title:hover {
     display: inline;
     color: $BrandSecondaryColor;
     font-size: 18px;
+    text-decoration: none;
   }
-  .location-type {
-    display: inline;
-    color: $BrandPrimaryColor;
-    display: inline;
-    text-align: center;
-    font-size: 13px;
-  }
+}
 
+.location-type {
+  display: inline;
+  color: $BrandPrimaryColor;
+  font-size: 13px;
 }
 
 .user-page {

@@ -1,0 +1,23 @@
+<%= form_for object do |f| %>
+  <div class="form-group">
+    <%= f.label :title %></br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rental_type %></br>
+    <%= f.radio_button :rental_type, "Private Room" %> Private Room </br>
+    <%= f.radio_button :rental_type, "Entire House" %> Entire House
+  </div>
+  <div class="form-group">
+    <%= f.label :location %></br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %></br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="form-group">
+    <%= f.hidden_field :user_id, :value => current_user.id %></br>
+    <%= f.submit(:class => "btn btn-primary") %>
+  </div>
+<% end %>

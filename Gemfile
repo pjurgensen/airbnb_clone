@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'bcrypt'
 gem 'masonry-rails'
 gem 'devise'
+gem 'cancancan'
 
 group :development do
   gem 'better_errors'

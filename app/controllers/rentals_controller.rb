@@ -14,7 +14,7 @@ class RentalsController < ApplicationController
     if @rental.save
       # UserMailer.rental_created(current_user, @rental).deliver
       flash[:notice] = "Your rental was created successfully!"
-      redirect_to rentals_path
+      redirect_to rental_path(@rental)
     else
       flash[:alert] = "Your rental was not saved - please try again"
       render 'new'
@@ -22,6 +22,20 @@ class RentalsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @rental.update(rental_params)
+      # UserMailer.rental_created(current_user, @rental).deliver
+      flash[:notice] = "Your rental was updated successfully!"
+      redirect_to rental_path(@rental)
+    else
+      flash[:alert] = "Your rental was not updated - please try again"
+      render 'edit'
+    end
   end
 
 private

@@ -1,13 +1,21 @@
-<%= content_for(:title, "Rentals") %>
+<%= content_for(:title, "Home") %>
 
-<div class="all-rentals container">
+<div class="home-page container">
+  <h1>betterbnb</h1>
   <div class="row">
-    <h1>betterbnb</h1>
-
-    <% @rentals.each do | rental | %>
-      <li class="rental-title"><%= link_to rental.title, rental_path(rental) %></li><br />
-      <li class="location-type"><%= rental.location %> | <%= rental.rental_type %></li><br /><br />
-    <% end %>
-
+    <div class="photo">
+      <%= image_tag("rental-home.jpg", height: '80%', width: '80%', class: "rental-home") %>
+    </div>
   </div>
+  <%= link_to "sign up for betterbnb", new_user_registration_path, class: "signup-button btn btn-default" %>
+
+  <br />
+  <br />
+</div>
+
+<div class="all-rentals">
+  <% @rentals.each do | rental | %>
+    <li><%= link_to rental.title, rental_path(rental), class: "rental-title" %></li><br />
+    <li class="location-type"><%= rental.location %> | <%= rental.rental_type %></li><br /><br />
+  <% end %>
 </div>
