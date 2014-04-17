@@ -4,20 +4,25 @@
     <h3><%= @user.email %></h3>
 
     <br />
-
-    <% @rentals.each do | rental | %>
-      <li><%= link_to rental.title, rental_path(rental), class: "rental-title"  %></li><br />
-      <li class="location-type"><%= rental.location %> | <%= rental.rental_type %></li><br />
-      <li class="location-type"><%= rental.user.username %> | <%= rental.created_at.strftime("%B %d, %Y") %></li><br />
-      <% if current_user.id = rental.user_id %>
-        <li><%= link_to "Edit", edit_rental_path(rental), class: "rental-edit btn btn-default btn-xs" %></li>
-        <li><%= link_to "Delete", edit_rental_path(rental),
-                        :confirm => "Are you sure?",
-                        :method => "delete",
-                        class: "rental-edit btn btn-default btn-xs" %></li><br />
+    <div class="col-9">
+      <% @rentals.each do | rental | %>
+        <li><%= link_to rental.title, rental_path(rental), class: "rental-title"  %></li><br />
+        <li class="location-type"><%= rental.location %> | <%= rental.rental_type %></li><br />
+        <li class="location-type"><%= rental.user.username %> | <%= rental.created_at.strftime("%B %d, %Y") %></li><br />
+        <% if current_user.id = rental.user_id %>
+          <li><%= link_to "Edit", edit_rental_path(rental), class: "rental-edit btn btn-default btn-xs" %></li>
+          <li><%= link_to "Delete", edit_rental_path(rental),
+                          :confirm => "Are you sure?",
+                          :method => "delete",
+                          class: "rental-edit btn btn-default btn-xs" %></li><br />
+        <% end %>
+        <br />
       <% end %>
-      <br />
-    <% end %>
-
+    </div>
+    <div class="col-3">
+      <% @user.reservations.each do | reservation | %>
+        <%= reservation.rental.title %>
+      <% end %>
+    </div>
   </div>
 </div>
