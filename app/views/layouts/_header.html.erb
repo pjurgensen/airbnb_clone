@@ -3,6 +3,12 @@
     <ul class="brand pull-left">
       <li><%= link_to "betterbnb", root_url %></li>
     </ul>
+    <div class="search-bar pull-left">
+      <form action="/rentals?query" method="get">
+        <input id="search" name="query" type="text" placeholder="Search"  >
+        <button class="tiny" style="visibility: hidden;">Search</button>
+      </form>
+    </div>
     <ul class="header-links pull-right">
       <% if current_user %>
         <li><%= link_to "Add a Rental", new_rental_path %></li>

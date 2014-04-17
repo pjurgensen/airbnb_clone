@@ -1,0 +1,11 @@
+<div class="search-results container">
+  <div class="row">
+    <h1>Search Results</h1>
+
+    <% @search_results.each do | rental | %>
+      <li><%= link_to rental.title, rental_path(rental), class: "rental-title" %></li><br />
+      <li class="location-type"><%= rental.location %> | <%= rental.rental_type %></li><br /><br />
+    <% end %>
+
+  </div>
+</div>

@@ -14,6 +14,7 @@ gem 'bcrypt'
 gem 'masonry-rails'
 gem 'devise'
 gem 'cancancan'
+gem 'textacular'
 
 group :development do
   gem 'better_errors'

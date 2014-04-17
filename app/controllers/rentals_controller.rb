@@ -3,6 +3,17 @@ class RentalsController < ApplicationController
 
   def index
     @rentals = Rental.all
+    @search = params[:query]
+    if @search == nil
+      render('index.html.erb')
+    else
+      @search_results = Rental.basic_search(@search)
+      render 'search.html.erb'
+    end
+  end
+
+  def search
+    @search_results = Rental.basic_search(@search)
   end
 
   def new

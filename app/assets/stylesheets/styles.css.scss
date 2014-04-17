@@ -54,9 +54,14 @@ $BrandSecondaryColor: #F0A51A;
 
 .container-inner {
   width: 100%;
-
+  .search-bar {
+    margin-top: 13px;
+    margin-left: 28px;
+  }
+  input {
+    color: black;
+  }
 }
-
 
 
 /* ======================================= BODY ======================================= */
