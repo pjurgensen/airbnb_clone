@@ -10,7 +10,11 @@
       <li class="location-type"><%= rental.location %> | <%= rental.rental_type %></li><br />
       <li class="location-type"><%= rental.user.username %> | <%= rental.created_at.strftime("%B %d, %Y") %></li><br />
       <% if current_user.id = rental.user_id %>
-        <li><%= link_to "Edit Rental", edit_rental_path(rental), class: "rental-edit btn btn-default btn-xs" %></li><br />
+        <li><%= link_to "Edit", edit_rental_path(rental), class: "rental-edit btn btn-default btn-xs" %></li>
+        <li><%= link_to "Delete", edit_rental_path(rental),
+                        :confirm => "Are you sure?",
+                        :method => "delete",
+                        class: "rental-edit btn btn-default btn-xs" %></li><br />
       <% end %>
       <br />
     <% end %>

@@ -38,6 +38,11 @@ class RentalsController < ApplicationController
     end
   end
 
+  def destroy
+    @rental.destroy
+    redirect_to user_path(current_user)
+  end
+
 private
 
   def rental_params
