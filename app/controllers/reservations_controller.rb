@@ -14,10 +14,10 @@ class ReservationsController < ApplicationController
     if @reservation.save
       # UserMailer.reservations_created(current_user, @reservation).deliver
       flash[:notice] = "Your reservation was created successfully!"
-      redirect_to rentals_path
+      redirect_to user_path(current_user)
     else
       flash[:alert] = "Your reservation was not saved - please try again"
-      render 'new'
+      redirect_to :back
     end
   end
 

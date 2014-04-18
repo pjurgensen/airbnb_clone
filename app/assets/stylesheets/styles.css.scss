@@ -152,21 +152,21 @@ li {
 }
 
 .user-page {
-  .user-handle {
+  margin-top: 75px;
+  .user-name {
     display: inline;
     color: $BrandPrimaryColor;
-    font-size: 8px;
-    text-align: left;
   }
-  .user-message {
+  .user-email {
     display: inline;
     color: $BrandSecondaryColor;
+    font-size: 18px;
   }
 
 }
 
 .photoslot{
-  padding: 9rem 0rem 9rem 0rem;
+  padding: 9rem 0rem;
   background: url("http://topappandroid.com/wp-content/uploads/2014/03/SAOTAfirstcrescent1.jpg") center;
   background-size: cover;
 

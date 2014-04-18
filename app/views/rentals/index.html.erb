@@ -1,6 +1,11 @@
 <%= content_for(:title, "Home") %>
 
-<div class="all-rentals">
+<%= render 'photoslot' %>
+
+<br />
+<br />
+
+<div class="all-rentals container">
   <% @rentals.each do | rental | %>
     <li><%= link_to rental.title, rental_path(rental), class: "rental-title" %></li><br />
     <li class="location-type"><%= rental.location %> | <%= rental.rental_type %></li><br /><br />
